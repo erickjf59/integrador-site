@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Derrete Shop - Banho e Tosa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fffaf0;
+      color: #333;
+    }
+    header {
+      background-color: #ff914d;
+      padding: 30px 20px;
+      color: white;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    h2 {
+      color: #ff914d;
+      text-align: center;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+    form input, form select {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background: #ff914d;
+      color: white;
+      padding: 12px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .info-list, .info-grid {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      margin: 15px 0;
+    }
+    .info-grid ul {
+      list-style: none;
+      padding: 0;
+    }
+    .info-grid li::before {
+      content: '🐾 ';
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Derrete Shop</h1>
+    <p>Especialistas em banho e tosa com muito carinho!</p>
+    <nav>
+      <a href="#agendamento">Agendamento</a>
+      <a href="#etapas">Etapas do Banho</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section id="agendamento">
+    <div class="container">
+      <h2>Agende um horário</h2>
+      <form onsubmit="enviarFormulario(event)">
+        <input type="text" placeholder="Nome do dono" required>
+        <input type="text" placeholder="Nome do cachorro" required>
+        <input type="date" required>
+        <input type="time" required>
+        <input type="tel" placeholder="Telefone/WhatsApp" required>
+
+        <label>Tipo de Tosa:</label>
+        <select required>
+          <option value="">Selecione</option>
+          <option>Tosa na tesoura</option>
+          <option>Tosa na máquina</option>
+        </select>
+
+        <label>Tratamento da Pelagem:</label>
+        <select required>
+          <option value="">Selecione</option>
+          <option>Hidratação com Hydra</option>
+          <option>Hidratação de argan</option>
+        </select>
+
+        <label>Manutenção Essencial:</label>
+        <select required>
+          <option value="">Selecione</option>
+          <option>Tosa higiênica</option>
+          <option>Escovação de dentes</option>
+        </select>
+
+        <button type="submit">Enviar Agendamento</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="etapas">
+    <div class="container">
+      <h2>Etapas do Banho</h2>
+      <div class="info-list">
+        <ul>
+          <li>🛁 Banho com produtos específicos para cada tipo de pelagem</li>
+          <li>💨 Secagem cuidadosa com secadores silenciosos</li>
+          <li>🧹 Escova na pelagem para remover nós e excesso de pelos</li>
+          <li>👂 Limpeza dos ouvidos com produtos adequados</li>
+          <li>🐾 Corte de unhas com precisão e segurança</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <div class="container">
+      <h2>Serviços Disponíveis</h2>
+
+      <div class="info-grid">
+        <h3>🐕 Tipos de Tosa</h3>
+        <ul>
+          <li>Tosa na tesoura – acabamento mais delicado e modelado</li>
+          <li>Tosa na máquina – prática e ideal para dias quentes</li>
+        </ul>
+      </div>
+
+      <div class="info-grid">
+        <h3>🧴 Tratamentos de Pelagem</h3>
+        <ul>
+          <li>Hidratação com Hydra – brilho e maciez instantânea</li>
+          <li>Hidratação de argan – nutrição profunda da pelagem</li>
+        </ul>
+      </div>
+
+      <div class="info-grid">
+        <h3>🧼 Manutenção Essencial</h3>
+        <ul>
+          <li>Tosa higiênica – conforto e higiene em regiões sensíveis</li>
+          <li>Escovação de dentes – saúde bucal para seu pet</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="container">
+      <h2>Fale com a gente</h2>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/5511999999999" target="_blank">(11) 99999-9999</a></p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/derreteshop" target="_blank">@derreteshop</a></p>
+      <p><strong>Endereço:</strong> Rua dos Pets Felizes, 123 - São Paulo/SP</p>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.67264375094!2d-46.6565743844593!3d-23.582887368265745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59d983b5c715%3A0x82273b0ccdf7bc8f!2sParque%20Ibirapuera!5e0!3m2!1spt-BR!2sbr!4v1715623456789!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Derrete Shop - Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function enviarFormulario(event) {
+      event.preventDefault();
+      alert("Agendamento enviado com sucesso! Entraremos em contato pelo WhatsApp.");
+    }
+  </script>
+</body>
+</html>
